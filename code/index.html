@@ -6,42 +6,15 @@
   <title>Home Page</title>
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom styles -->
-  <style>
-    /* Customize navbar */
-    .navbar-custom {
-      background-color: #343a40; /* dark grey */
-    }
-    .navbar-custom .navbar-brand, .navbar-custom .navbar-text {
-      color: #ffffff; /* white */
-    }
-    .navbar-custom .nav-link {
-      color: #ffffff; /* white */
-    }
-    .navbar-custom .nav-link:hover {
-      color: #cccccc; /* light grey on hover */
-    }
-    .navbar-custom .form-inline input {
-      width: 300px; /* Adjust the width as needed */
-    }
-    .rounded{
-      width: 50%;
-      margin: auto;
-    }
-
-    @media screen and (max-width: 768px){
-      .carouselExampleIndicators{
-        display: none;
-      }
-    }
-
-  </style>
+  <link rel="stylesheet" href="/styles/index.css">
+  <link rel="stylesheet" href="styles/navbar.css">
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
-    <a class="navbar-brand" href="#">Your Logo</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/LA-Logo-libri-wiki.png" alt="Logo" style="height: 40px;">
+    </a>    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -50,13 +23,21 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#">Login</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Area personale
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Profilo</a>
+            <a class="dropdown-item" href="#">Impostazioni</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="#">Contatti</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
@@ -65,6 +46,16 @@
       </form>
     </div>
   </nav>
+
+  <!-- Jumbotron -->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">EduSphere</h1>
+      <p class="lead">L'istruzione è un diritto, non un privilegio. Scopri corsi gratuiti per tutti, ovunque</p>
+    </div>
+  </div>
+
+  <!-- Cards -->
   <div class="container mt-5">
     <div class="row">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 100%; margin: auto;">
@@ -96,7 +87,45 @@
       <!-- Course Card 1 -->
       <div class="col-md-4 mb-4">
         <div class="card" style="margin-top: 20px;">
-          <img src="img/image.png" class="card-img-top" alt="Course 1 Image">
+          <img src="img/courses/java-course.jpg" class="card-img-top" alt="Course 1 Image">
+          <div class="card-body">
+            <h5 class="card-title">Programmazione Java</h5>
+            <p class="card-text">Corso completo per principianti</p>
+            <br><br>
+            <div class="text-center">
+              <img src="img/five_star.png" alt="photo" class="rounded"><br>
+              <a href="card-link">vedi recensioni</a>
+            </div><br><br>
+            <a href="#" class="btn btn-outline-dark btn-lg btn-block">Visualizza</a>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Insegnante: John Doe</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card" style="margin-top: 20px;">
+          <img src="img/courses/js-course.jpg" class="card-img-top" alt="Course 1 Image">
+          <div class="card-body">
+            <h5 class="card-title">Programmazione Java</h5>
+            <p class="card-text">Corso completo per principianti</p>
+            <br><br>
+            <div class="text-center">
+              <img src="img/three_star.png" alt="photo" class="rounded"><br>
+              <a href="card-link">vedi recensioni</a>
+            </div><br><br>
+            <a href="#" class="btn btn-outline-dark btn-lg btn-block">Visualizza</a>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Insegnante: John Doe</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card" style="margin-top: 20px;">
+          <img src="img/courses/os-course.jpg" class="card-img-top" alt="Course 1 Image">
           <div class="card-body">
             <h5 class="card-title">Programmazione Java</h5>
             <p class="card-text">Corso completo per principianti</p>
@@ -115,7 +144,7 @@
 
       <div class="col-md-4 mb-4">
         <div class="card" style="margin-top: 20px;">
-          <img src="img/image.png" class="card-img-top" alt="Course 1 Image">
+          <img src="img/courses/spring-course.jpg" class="card-img-top" alt="Course 1 Image">
           <div class="card-body">
             <h5 class="card-title">Programmazione Java</h5>
             <p class="card-text">Corso completo per principianti</p>
@@ -134,7 +163,7 @@
 
       <div class="col-md-4 mb-4">
         <div class="card" style="margin-top: 20px;">
-          <img src="img/image.png" class="card-img-top" alt="Course 1 Image">
+          <img src="img/courses/alg-course.jpg" class="card-img-top" alt="Course 1 Image">
           <div class="card-body">
             <h5 class="card-title">Programmazione Java</h5>
             <p class="card-text">Corso completo per principianti</p>
@@ -153,13 +182,13 @@
 
       <div class="col-md-4 mb-4">
         <div class="card" style="margin-top: 20px;">
-          <img src="img/image.png" class="card-img-top" alt="Course 1 Image">
+          <img src="img/courses/mysql-course.jpg" class="card-img-top" alt="Course 1 Image">
           <div class="card-body">
             <h5 class="card-title">Programmazione Java</h5>
             <p class="card-text">Corso completo per principianti</p>
             <br><br>
             <div class="text-center">
-              <img src="img/four_star.png" alt="photo" class="rounded"><br>
+              <img src="img/five_star.png" alt="photo" class="rounded"><br>
               <a href="card-link">vedi recensioni</a>
             </div><br><br>
             <a href="#" class="btn btn-outline-dark btn-lg btn-block">Visualizza</a>
@@ -168,49 +197,20 @@
             <small class="text-muted">Insegnante: John Doe</small>
           </div>
         </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card" style="margin-top: 20px;">
-          <img src="img/image.png" class="card-img-top" alt="Course 1 Image">
-          <div class="card-body">
-            <h5 class="card-title">Programmazione Java</h5>
-            <p class="card-text">Corso completo per principianti</p>
-            <br><br>
-            <div class="text-center">
-              <img src="img/four_star.png" alt="photo" class="rounded"><br>
-              <a href="card-link">vedi recensioni</a>
-            </div><br><br>
-            <a href="#" class="btn btn-outline-dark btn-lg btn-block">Visualizza</a>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">Insegnante: John Doe</small>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card" style="margin-top: 20px;">
-          <img src="img/image.png" class="card-img-top" alt="Course 1 Image">
-          <div class="card-body">
-            <h5 class="card-title">Programmazione Java</h5>
-            <p class="card-text">Corso completo per principianti</p>
-            <br><br>
-            <div class="text-center">
-              <img src="img/four_star.png" alt="photo" class="rounded"><br>
-              <a href="card-link">vedi recensioni</a>
-            </div><br><br>
-            <a href="#" class="btn btn-outline-dark btn-lg btn-block">Visualizza</a>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">Insegnante: John Doe</small>
-          </div>
-        </div>
-      </div>
-
-      
+      </div>   
     </div>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>&copy; 2020 Your Company. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- Bootstrap JS and dependencies (jQuery, Popper.js) -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

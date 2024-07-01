@@ -1,0 +1,10 @@
+.rounded{
+    width: 50%;
+    margin: auto;
+  }
+
+  @media screen and (max-width: 768px){
+    .carouselExampleIndicators{
+      display: none;
+    }
+  }

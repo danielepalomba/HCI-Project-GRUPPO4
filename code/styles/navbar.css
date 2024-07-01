@@ -1,0 +1,15 @@
+.navbar-custom {
+    background-color: #343a40; /* dark grey */
+  }
+  .navbar-custom .navbar-brand, .navbar-custom .navbar-text {
+    color: #ffffff; /* white */
+  }
+  .navbar-custom .nav-link {
+    color: #ffffff; /* white */
+  }
+  .navbar-custom .nav-link:hover {
+    color: #cccccc; /* light grey on hover */
+  }
+  .navbar-custom .form-inline input {
+    width: 300px; /* Adjust the width as needed */
+  }
