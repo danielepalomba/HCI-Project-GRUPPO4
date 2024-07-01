@@ -3,9 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - EduSphere</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.html">
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            margin: 30px auto;
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container form {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .login-me {
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/LA-Logo-libri-wiki.png" alt="Logo" style="height: 40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Area personale
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Profilo</a>
+                        <a class="dropdown-item" href="#">Impostazioni</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contatti</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Cerca" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Cerca</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Login form -->
+    <div class="login-container">
+        <h2 class="text-center">Accedi a EduSphere</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-outline-dark btn-lg btn-block">Login</button>
+            <div id="errorAlert" class="alert alert-danger mt-3 d-none" role="alert">
+                Credenziali non valide. Riprova.
+            </div>
+            <div class="text-center mt-3">
+                <a href="#">Hai dimenticato la password?</a>
+            </div><br>
+            <p class="text-center">oppure</p><br>
+            <div class="login-me">
+                <div class="media">
+                    <a href="#"><img src="img/logos/facebook-logo.png" class="mr-3 w-25" alt="facebook-logo"></a>
+                </div>
+                <div class="media">
+                    <a href="#"><img src="img/logos/google-logo.png" class="mr-3 w-25" alt="google-logo"></a>
+                </div>
+                <div class="media">
+                    <a href="#"><img src="img/logos/github-logo.png" class="mr-3 w-25" alt="github-logo"></a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2020 Your Company. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>
