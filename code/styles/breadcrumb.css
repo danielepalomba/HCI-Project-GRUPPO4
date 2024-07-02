@@ -1,0 +1,14 @@
+.styled{
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blk{
+    color: black;
+}
+
+.blk:hover{
+    color: black;
+}

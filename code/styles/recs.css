@@ -1,0 +1,36 @@
+/* Stili personalizzati */
+body {
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.review {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.stars{
+    object-fit: cover;
+    width: 10%;
+}
+
+.review-header{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .stars{
+        width: 20%;
+    }
+}

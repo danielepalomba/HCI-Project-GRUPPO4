@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - EduSphere</title>
+    <title>Pagina di Recensioni</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/recs.css">
     <link rel="stylesheet" href="styles/navbar.css">
-    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="/styles/breadcrumb.css">
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
         <a class="navbar-brand" href="index.html">
             <img src="img/LA-Logo-libri-wiki.png" alt="Logo" style="height: 40px;">
@@ -46,37 +46,40 @@
             </form>
         </div>
     </nav>
-
-    <!-- Login form -->
-    <div class="login-container">
-        <h2 class="text-center">Accedi a EduSphere</h2>
-        <form id="loginForm">
-            <div class="form-group">
-                <input type="email" class="form-control" id="email" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" id="password" placeholder="Password" required>
-            </div>
-            <button type="submit" class="btn btn-outline-dark btn-lg btn-block">Login</button>
-            <div id="errorAlert" class="alert alert-danger mt-3 d-none" role="alert">
-                Credenziali non valide. Riprova.
-            </div>
-            <div class="text-center mt-3">
-                <a href="#">Hai dimenticato la password?</a>
-            </div><br>
-            <p class="text-center">oppure</p><br>
-            <div class="login-me">
-                <div class="media">
-                    <a href="#"><img src="img/logos/facebook-logo.png" class="mr-3 w-25" alt="facebook-logo"></a>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb styled">
+          <li class="breadcrumb-item"><a href="index.html" class="blk">Home</a></li>
+          <li class="breadcrumb-item"><a href="#" class="blk">Nome corso</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Recensioni</li>
+        </ol>
+      </nav>
+    <div class="container mt-5">
+        <h1 class="text-center">Recensioni</h1>
+        
+        <div id="reviews" class="mb-4">
+            <div class="review">
+                <div class="review-header">
+                    <h5>Mario Rossi</h5>
+                    <img class="stars" src="img/four_star.png" alt="stars">
                 </div>
-                <div class="media">
-                    <a href="#"><img src="img/logos/google-logo.png" class="mr-3 w-25" alt="google-logo"></a>
-                </div>
-                <div class="media">
-                    <a href="#"><img src="img/logos/github-logo.png" class="mr-3 w-25" alt="github-logo"></a>
-                </div>
+                <p>Ottimo corso, sono molto soddisfatto!</p>
             </div>
-        </form>
+            <div class="review">
+                <div class="review-header">
+                    <h5>Daniele Palomba</h5>
+                    <img class="stars" src="img/five_star.png" alt="stars">
+                </div>
+                <p>Il Tutor è stato molto disponibile e cortese.</p>
+            </div>
+            <div class="review">
+                <div class="review-header">
+                    <h5>Filippo Vetrale</h5>
+                    <img class="stars" src="img/two_star.png" alt="stars">
+                </div>
+                <p>Lezioni facili! ma i compiti erano troppo difficili per me.</p>
+            </div>
+        </div>
+        <a href="add-rec.html" class="btn btn-outline-dark btn-lg btn-block">Aggiungi una recensione</a>
     </div>
     <footer style="position: absolute; bottom: 0;">
         <div class="container">
@@ -87,11 +90,8 @@
             </div>
         </div>
     </footer>
-
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

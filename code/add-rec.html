@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/styles/navbar.css">
+        <link rel="stylesheet" href="/styles/breadcrumb.css">
+        <link rel="stylesheet" href="styles/recensioni.css">
+      </head>
+      <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/LA-Logo-libri-wiki.png" alt="Logo" style="height: 40px;">
+          </a>    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Area personale
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Profilo</a>
+                  <a class="dropdown-item" href="#">Impostazioni</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Logout</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contatti</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Cerca" aria-label="Search">
+              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Cerca</button>
+            </form>
+          </div>
+        </nav>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb styled">
+              <li class="breadcrumb-item"><a href="index.html" class="blk">Home</a></li>
+              <li class="breadcrumb-item"><a href="#" class="blk">Nome corso</a></li>
+              <li class="breadcrumb-item"><a href="recs.html" class="blk">Recensioni</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Scrivi recensione</li>
+            </ol>
+          </nav>
+          <div class="title">
+            <h3 class="h3">La tua opinione è importante, valuta il nostro corso</h3>
+          </div>
+          <div class="grid-container">
+            <div class="stars-container">
+                <img id="image" src="img/zero_star.png" class="img-fluid" alt="stars">
+                <input type="number" class="form-control" id="numberInput" placeholder="" min="1" max="5" />
+            </div>
+            <div class="area-container">
+                <textarea name="rec" id="rec" placeholder="Scrivi la tua recensione..."></textarea>
+            </div>
+            <div class="btn-container">
+                <button type="button" class="btn btn-outline-dark btn-lg btn-block" data-toggle="modal" data-target="#exampleModalCenter">Invia</button>
+            </div>
+          </div>
+          <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Recensione aggiunta!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        La tua recensione è stata aggiunta correttamente. Grazie per il tuo contributo!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Annulla</button>
+        <a href="index.html" class="btn btn-outline-success">Home</a>
+      </div>
+    </div>
+  </div>
+</div>
+          <div style="display: block; margin-top: 100px;"></div>
+          <footer style="position: absolute; bottom: 0;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>&copy; 2020 EduSphere. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/rec-stars.js"></script>
+</body>
+</html>
