@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - EduSphere</title>
+    <title>Registrazione - EduSphere</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/navbar.css">
-    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/register.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -49,21 +49,24 @@
     </nav>
 
     <!-- Login form -->
-    <div class="login-container">
-        <h2 class="text-center">Accedi a EduSphere</h2>
-        <form id="loginForm">
+    <div class="register-container">
+        <h2 class="text-center">Registrati a EduSphere</h2>
+        <form id="registerForm">
+            <div class="form-group">
+                <input type="text" class="form-control" id="name" placeholder="Nome" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="surname" placeholder="Cognome" required>
+            </div>
             <div class="form-group">
                 <input type="email" class="form-control" id="email" placeholder="Email" required>
             </div>
             <div class="form-group">
                 <input type="password" class="form-control" id="password" placeholder="Password" required>
             </div>
-            <button type="submit" class="btn btn-outline-dark btn-lg btn-block">Login</button>
+            <input type="submit" value="Registrati" class="btn btn-outline-dark btn-lg btn-block">
             <div id="errorAlert" class="alert alert-danger mt-3 d-none" role="alert">
-                Credenziali non valide. Riprova.
-            </div>
-            <div class="text-center mt-3">
-                <a href="#">Hai dimenticato la password?</a>
+                L'email è già in uso. Riprova.
             </div><br>
             <p class="text-center">oppure</p><br>
             <div class="login-me">
@@ -77,8 +80,6 @@
                     <a href="#"><img src="img/logos/github-logo.png" class="mr-3 w-25" alt="github-logo"></a>
                 </div>
             </div>
-            <div class="text-center mt-3">
-                <p>Non hai un account? <a href="register.html">Registrati</a></p>
         </form>
     </div>
     <footer style="position: absolute; bottom: 0;">
@@ -95,6 +96,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/login.js"></script>
+    <script src="js/register.js"></script>
 </body>
 </html>
