@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="styles/courses.css">
+    <link rel="stylesheet" href="styles/breadcrumb.css">
+    <title>I tuoi corsi</title>
+</head>
+<body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/LA-Logo-libri-wiki.png" alt="Logo" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Area personale
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Profilo</a>
+                            <a class="dropdown-item" href="courses.html">I miei corsi</a>
+                            <a class="dropdown-item" href="#">Impostazioni</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contatti</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Cerca" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Cerca</button>
+                </form>
+            </div>
+        </nav>
+          <!-- Jumbotron -->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">I miei corsi</h1>
+      <p class="lead">E' ora di imparare!</p>
+    </div>
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb styled">
+      <li class="breadcrumb-item"><a href="index.html" class="blk">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">I miei corsi</li>
+    </ol>
+  </nav>
+    <!-- Cards -->
+    <div class="container mt-5">
+        <div class="row">
+<!-- Course Card 1 -->
+<div class="col-md-4 mb-4">
+    <div class="card" style="margin-top: 20px;">
+      <img src="img/courses/java-course.jpg" class="card-img-top" alt="Course 1 Image">
+      <div class="card-body">
+        <h5 class="card-title">Programmazione Java</h5>
+        <p class="card-text">Corso completo per principianti</p>
+        <br><br>
+        <div class="text-center">
+          <img src="img/five_star.png" alt="photo" class="rounded"><br>
+          <a href="recs.html">vedi recensioni</a>
+        </div><br><br>
+        <a href="#" class="btn btn-outline-dark btn-lg btn-block">Visualizza</a>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Insegnante: John Doe</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 mb-4">
+    <div class="card" style="margin-top: 20px;">
+      <img src="img/courses/js-course.jpg" class="card-img-top" alt="Course 1 Image">
+      <div class="card-body">
+        <h5 class="card-title">Programmazione Java</h5>
+        <p class="card-text">Corso completo per principianti</p>
+        <br><br>
+        <div class="text-center">
+          <img src="img/three_star.png" alt="photo" class="rounded"><br>
+          <a href="recs.html">vedi recensioni</a>
+        </div><br><br>
+        <a href="#" class="btn btn-outline-dark btn-lg btn-block">Visualizza</a>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Insegnante: John Doe</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 mb-4">
+    <div class="card" style="margin-top: 20px;">
+      <img src="img/courses/os-course.jpg" class="card-img-top" alt="Course 1 Image">
+      <div class="card-body">
+        <h5 class="card-title">Programmazione Java</h5>
+        <p class="card-text">Corso completo per principianti</p>
+        <br><br>
+        <div class="text-center">
+          <img src="img/four_star.png" alt="photo" class="rounded"><br>
+          <a href="recs.html">vedi recensioni</a>
+        </div><br><br>
+        <a href="#" class="btn btn-outline-dark btn-lg btn-block">Visualizza</a>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Insegnante: John Doe</small>
+      </div>
+    </div>
+  </div>   
+        </div>
+      </div>
+    
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2020 Your Company. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+      <!-- Bootstrap JS and dependencies (jQuery, Popper.js) -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
