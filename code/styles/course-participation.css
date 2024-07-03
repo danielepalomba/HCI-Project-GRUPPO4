@@ -1,0 +1,35 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    width: 95%;
+    margin: 30px auto 70px auto;
+}
+
+.info-video{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-video img{
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    object-fit: cover;
+}
+
+.info{
+    text-align: left;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px){
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
+}
