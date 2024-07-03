@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dettagli del corso</title>
+    <title>Partecipazione al corso</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/breadcrumb.css">
-    <link rel="stylesheet" href="styles/course-details.css">
+    <link rel="stylesheet" href="styles/send-homework.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
@@ -48,60 +48,71 @@
       </nav>
       <div class="jumbotron jumbotron-fluid">
         <div class="container" style="text-align: center;">
-          <h1 class="display-4">Nome del corso</h1>
+          <h1 class="display-4">Consegna del compito</h1>
           <p class="lead"></p>
         </div>
       </div>
       <nav aria-label="breadcrumb">
           <ol class="breadcrumb styled">
             <li class="breadcrumb-item"><a href="index.html" class="blk">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Dettagli corso</li>
+            <li class="breadcrumb-item"><a href="courses.html" class="blk">I miei corsi</a></li>
+            <li class="breadcrumb-item"><a href="course-participation.html" class="blk">Nome corso</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Consegna compito</li>
           </ol>
         </nav>
+        
         <div class="grid-container">
-            <div class="description">
-                <h4>Descrizione del corso</h4>
-                In questa sezione andrà collocata la descrizione dettagliata del corso che il sito offre. Qui potrete fornire informazioni approfondite sui contenuti del corso, il programma delle lezioni, i metodi di insegnamento utilizzati, e qualsiasi altro dettaglio rilevante per gli utenti. La descrizione dovrebbe essere chiara e completa, in modo da offrire ai potenziali studenti tutte le informazioni necessarie per comprendere appieno cosa aspettarsi dal corso e come potrà aiutarli a raggiungere i loro obiettivi.
-            </div>
-            <div class="goals">
-                <h6>Obiettivi del corso:</h6>
-                <ul>
-                    <li>Obiettivo 1</li>
-                    <li>Obiettivo 2</li>
-                    <li>Obiettivo 3</li>
-                </ul>
-            </div>
-            <div class="skills">
-                <h6>Competenze finali:</h6>
-                <ul>
-                    <li>Competenza 1</li>
-                    <li>Competenza 2</li>
-                    <li>Competenza 3</li>
-                </ul>
+            <div class="loadfile">
+                <h2>Carica il file</h2>
+                <input type="file" id="file" name="file" accept=".pdf">
+                <div class="alert alert-success small" role="alert">
+                  Trascina qui il tuo file .zip o clicca per caricare.
+                </div>            
+              </div>
+            <div class="info">
+                <h2>Informazioni</h2>
+                <p>Data e ora di consegna: <strong><span id="dataAttuale"></span></strong></p>
+                <h6>Traccia del compito</h6>
+                <p>Il compito prevede la consegna di una pagina html per la visualizzazione di 2 foto, alla
+                  pagina deve essere applicato lo stile tramie CSS. I file devono essere consegnati in un 
+                 unico file .zip</p><br><br>
+                 <div class="alert alert-warning" role="alert">
+                  <p><i>Per ulteriori chiarimenti, è possibile contattare il tutor tramite la mail
+                    specificata nelle informazioni del corso.</i></p>
+                </div>
             </div>
             <div class="btn-container">
-              <button id="input-button" type="button" class="btn btn-outline-dark btn-lg btn-block" data-toggle="modal" data-target="#exampleModalCenter">Iscriviti</button>
+              <button type="button" class="btn btn-outline-dark btn-lg btn-block" data-toggle="modal" data-target="#exampleModalCenter">
+                Consegna
+              </button>        
             </div>
         </div>
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Completa iscrizione</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                Stai per iscriverti al corso di 'Nome corso'. Sei sicuro di voler procedere?
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Annulla</button>
-                <a href="subscribed-course.html" class="btn btn-outline-success">Procedi</a>
-              </div>
-            </div>
-          </div>
-        </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Consegna compito</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <p>Una volta consegnato il compito, non sarà possibile modificarlo. Sei sicuro di voler procedere?</p>
+          <p><strong>Nome file:</strong> file.zip</p>
+          <p><strong>Data e ora:</strong> <span id="data">gg/MM/yy hh:mm</span></p>
+          <p><strong>Corso:</strong> Nome corso</p>
+          <p><strong>Docente:</strong> Nome docente</p>
+          <p><strong>Email docente:</strong> example@domain.com
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Annulla</button>
+        <a href="notify-homework.html" class="btn btn-outline-success">Invia</a>
+      </div>
+    </div>
+  </div>
+</div>
+        
       <!-- Footer -->
       <footer>
         <div class="container">
@@ -116,5 +127,6 @@
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="js/date.js"></script>
 </body>
 </html>
